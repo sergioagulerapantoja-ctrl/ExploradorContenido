@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explora citas, fotos de perros y gatos, y datos curiosos al azar.">
+  <title>Explorador de contenido aleatorio</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="container">
+        <p class="site-name">Explorador de contenido aleatorio</p>
+        <div class="hero__intro">
+          <h1>Explora algo <em>nuevo</em></h1>
+          <p>Descubre citas, imágenes y datos interesantes con cada clic.</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="container cards">
+      <section class="card card--quote" id="citas" aria-labelledby="titulo-citas">
+        <header class="card__header">
+          <h2 id="titulo-citas">Citas</h2>
+          <a href="https://dummyjson.com/docs/quotes">DummyJSON</a>
+        </header>
+        <figure class="card__content card__text" aria-busy="false" lang="en">
+          <blockquote data-quote></blockquote>
+          <figcaption data-author></figcaption>
+        </figure>
+        <div class="card__footer">
+          <p class="card__status" role="status"></p>
+          <button type="button">Obtener otra cita</button>
+        </div>
+      </section>
+
+      <section class="card card--dog" id="perros" aria-labelledby="titulo-perros">
+        <header class="card__header">
+          <h2 id="titulo-perros">Perros</h2>
+          <a href="https://dog.ceo/dog-api/documentation/random">Dog CEO</a>
+        </header>
+        <div class="card__content card__image" aria-busy="false"></div>
+        <div class="card__footer">
+          <p class="card__status" role="status"></p>
+          <button type="button">Mostrar otro perro</button>
+        </div>
+      </section>
+
+      <section class="card card--cat" id="gatos" aria-labelledby="titulo-gatos">
+        <header class="card__header">
+          <h2 id="titulo-gatos">Gatos</h2>
+          <a href="https://cataas.com/">CATAAS</a>
+        </header>
+        <div class="card__content card__image" aria-busy="false"></div>
+        <div class="card__footer">
+          <p class="card__status" role="status"></p>
+          <button type="button">Mostrar otro gato</button>
+        </div>
+      </section>
+
+      <section class="card card--fact" id="datos" aria-labelledby="titulo-datos">
+        <header class="card__header">
+          <h2 id="titulo-datos">Datos curiosos</h2>
+          <a href="https://uselessfacts.jsph.pl/">Useless Facts</a>
+        </header>
+        <div class="card__content card__text" aria-busy="false" lang="en">
+          <p data-fact></p>
+        </div>
+        <div class="card__footer">
+          <p class="card__status" role="status"></p>
+          <button type="button">Mostrar otro dato</button>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
